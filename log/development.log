@@ -1,0 +1,116 @@
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "movies"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "movies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250702121840)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-10-21 23:25:15.188923', '2025-10-21 23:25:15.188926') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f55311e9428e07c7b12b139590f52feb1bac3450', '2025-10-21 23:25:15.190530', '2025-10-21 23:25:15.190531') RETURNING "key"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "movies"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "movies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250702121840)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-10-21 23:25:15.194509', '2025-10-21 23:25:15.194510') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (0.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-10-21 23:25:15.195157' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f55311e9428e07c7b12b139590f52feb1bac3450', '2025-10-21 23:25:15.195767', '2025-10-21 23:25:15.195767') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Aladdin"], ["rating", "G"], ["description", nil], ["release_date", "1992-11-25 00:00:00"], ["created_at", "2025-10-21 23:25:15.211950"], ["updated_at", "2025-10-21 23:25:15.211950"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "The Terminator"], ["rating", "R"], ["description", nil], ["release_date", "1984-10-26 00:00:00"], ["created_at", "2025-10-21 23:25:15.214166"], ["updated_at", "2025-10-21 23:25:15.214166"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "When Harry Met Sally"], ["rating", "R"], ["description", nil], ["release_date", "1989-07-21 00:00:00"], ["created_at", "2025-10-21 23:25:15.215227"], ["updated_at", "2025-10-21 23:25:15.215227"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "The Help"], ["rating", "PG-13"], ["description", nil], ["release_date", "2011-08-10 00:00:00"], ["created_at", "2025-10-21 23:25:15.216597"], ["updated_at", "2025-10-21 23:25:15.216597"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Chocolat"], ["rating", "PG-13"], ["description", nil], ["release_date", "2001-01-05 00:00:00"], ["created_at", "2025-10-21 23:25:15.217764"], ["updated_at", "2025-10-21 23:25:15.217764"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Amelie"], ["rating", "R"], ["description", nil], ["release_date", "2001-04-25 00:00:00"], ["created_at", "2025-10-21 23:25:15.219253"], ["updated_at", "2025-10-21 23:25:15.219253"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "2001: A Space Odyssey"], ["rating", "G"], ["description", nil], ["release_date", "1968-04-06 00:00:00"], ["created_at", "2025-10-21 23:25:15.220725"], ["updated_at", "2025-10-21 23:25:15.220725"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "The Incredibles"], ["rating", "PG"], ["description", nil], ["release_date", "2004-11-05 00:00:00"], ["created_at", "2025-10-21 23:25:15.221797"], ["updated_at", "2025-10-21 23:25:15.221797"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["description", nil], ["release_date", "1981-06-12 00:00:00"], ["created_at", "2025-10-21 23:25:15.222792"], ["updated_at", "2025-10-21 23:25:15.222792"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Chicken Run"], ["rating", "G"], ["description", nil], ["release_date", "2000-06-21 00:00:00"], ["created_at", "2025-10-21 23:25:15.223721"], ["updated_at", "2025-10-21 23:25:15.223721"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2025-10-21 16:25:38 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Redirected to http://0.0.0.0:3000/movies
+Completed 301 Moved Permanently in 3ms
+
+
+Started GET "/movies" for 127.0.0.1 at 2025-10-21 16:25:38 -0700
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN (?, ?, ?, ?) ORDER BY title[0m  [["rating", "G"], ["rating", "PG"], ["rating", "PG-13"], ["rating", "R"]]
+  ↳ app/views/movies/index.html.erb:27
+  Rendered movies/_movie.html.erb (Duration: 0.3ms | Allocations: 376)
+  Rendered movies/_movie.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered movies/_movie.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered movies/_movie.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered movies/_movie.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered movies/_movie.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered movies/_movie.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered movies/_movie.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered movies/_movie.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered movies/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 9512)
+  Rendered layout layouts/application.html.erb (Duration: 150.9ms | Allocations: 104914)
+Completed 200 OK in 188ms (Views: 155.5ms | ActiveRecord: 1.6ms | Allocations: 120684)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BR%5D=1&sort_by=title&commit=Refresh" for 127.0.0.1 at 2025-10-21 16:25:42 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "R"=>"1"}, "sort_by"=>"title", "commit"=>"Refresh"}
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN (?, ?, ?) ORDER BY title[0m  [["rating", "G"], ["rating", "PG"], ["rating", "R"]]
+  ↳ app/views/movies/index.html.erb:27
+  Rendered movies/_movie.html.erb (Duration: 0.2ms | Allocations: 32)
+  Rendered movies/_movie.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered movies/_movie.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered movies/_movie.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered movies/_movie.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered movies/_movie.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered movies/_movie.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered movies/_movie.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered movies/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1883)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2936)
+Completed 200 OK in 17ms (Views: 4.7ms | ActiveRecord: 0.3ms | Allocations: 5913)
+
+
+Started GET "/movies?ratings%5BR%5D=1&sort_by=title&commit=Refresh" for 127.0.0.1 at 2025-10-21 16:25:44 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"R"=>"1"}, "sort_by"=>"title", "commit"=>"Refresh"}
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = ? ORDER BY title[0m  [["rating", "R"]]
+  ↳ app/views/movies/index.html.erb:27
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered movies/_movie.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered movies/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1844)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2895)
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 4056)
+
+
